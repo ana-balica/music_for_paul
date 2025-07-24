@@ -1,6 +1,7 @@
 # music_for_paul
 Music player code for a simple raspberry pi player (Yoto player of sorts)
 
+```
    (Top view – looking at the pins)
    --------------------------------
   | 1  3.3V       | 2  5V         |
@@ -24,3 +25,4 @@ Music player code for a simple raspberry pi player (Yoto player of sorts)
   |37  GPIO26     |38  GPIO20     |
   |39  GND        |40  GPIO21     |
    --------------------------------
+```
