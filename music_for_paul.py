@@ -7,8 +7,8 @@ pygame.mixer.init()
 print("mixer init")
 
 button_song_map = {
-  Button(23): '/home/banana/song1.wav',
-  Button(24): '/home/banana/song2.wav',
+  Button(23): pygame.mixer.Sound('/home/banana/song1.wav'),
+  Button(24): pygame.mixer.Sound('/home/banana/song2.wav'),
 }
 print("button init")
 
