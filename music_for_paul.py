@@ -11,7 +11,7 @@ button_song_map = {
   Button(23): pygame.mixer.Sound('/home/banana/Music/bee_gees_stayin_alive.mp3'),
   Button(21): pygame.mixer.Sound('/home/banana/Music/christina_perri_you_are_my_sunshine.mp3'),
   Button(16): pygame.mixer.Sound('/home/banana/Music/louis_armstrong_what_a_wonderful_world.mp3'),
-  Button(12): pygame.mixer.Sound('/home/banana/Music/nutcracker.mp3'),
+  Button(12): pygame.mixer.Sound('/home/banana/Music/michael_jackson_billie_jean.mp3'),
   Button(5): pygame.mixer.Sound('/home/banana/Music/the_beatles_here_comes_the_sun.mp3'),
 }
 stop_button = Button(4)
@@ -25,4 +25,8 @@ stop_button.when_pressed = pygame.mixer.stop
 for button, song in button_song_map.items():
   button.when_pressed = lambda b=button, s=song: play_sound(b, s)
 
-pause()
+try:
+  pause()
+except KeyboardInterrupt:
+  print("Exiting...")
+  sys.exit(0)
