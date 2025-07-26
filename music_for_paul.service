@@ -1,0 +1,18 @@
+# /etc/systemd/system/music_for_paul.service
+[Unit]
+Description=Music for Paul
+After=network.target sound.target graphical.target
+Wants=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/banana/music_for_paul.py
+WorkingDirectory=/home/banana
+Restart=always
+User=banana
+Environment=PYTHONUNBUFFERED=1
+Environment="PULSE_SERVER=unix:/run/user/1000/pulse/native"
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+ExecStartPre=/bin/sleep 10
+
+[Install]
+WantedBy=multi-user.target
