@@ -26,3 +26,10 @@ Music player code for a simple raspberry pi player (Yoto player of sorts)
   |39  GND        |40  GPIO21     |
    --------------------------------
 ```
+
+To run if updating the daemon
+```
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart music_for_paul.service
+$ sudo systemctl status music_for_paul.service
+```
