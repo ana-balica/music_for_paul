@@ -23,6 +23,6 @@ def play_sound(button, song):
 
 stop_button.when_pressed = pygame.mixer.stop
 for button, song in button_song_map.items():
-  button.when_pressed = lambda button: play_sound(button, song)
+  button.when_pressed = lambda b=button, s=song: play_sound(b, s)
 
 pause()
